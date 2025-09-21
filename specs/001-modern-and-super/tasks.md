@@ -37,11 +37,11 @@
 
 ### Integration Tests (User Scenarios)
 
-- [ ] T020 [P] Integration test: Anonymous lot size calculation in `tests/integration/test-anonymous-calculation.test.ts`
-- [ ] T021 [P] Integration test: User registration and login flow in `tests/integration/test-user-auth.test.ts`
-- [ ] T022 [P] Integration test: Save and manage calculations in `tests/integration/test-save-calculations.test.ts`
-- [ ] T023 [P] Integration test: Mobile responsive experience in `tests/integration/test-mobile-responsive.test.ts`
-- [ ] T024 [P] Integration test: Error handling and edge cases in `tests/integration/test-error-handling.test.ts`
+- [x] T020 [P] Integration test: Anonymous lot size calculation in `tests/integration/test-anonymous-calculation.test.ts` ✅ COMPLETED
+- [x] T021 [P] Integration test: User registration and login flow in `tests/integration/test-user-auth.test.ts` ✅ COMPLETED
+- [x] T022 [P] Integration test: Save and manage calculations in `tests/integration/test-save-calculations.test.ts` ✅ COMPLETED
+- [x] T023 [P] Integration test: Mobile responsive experience in `tests/integration/test-mobile-responsive.test.ts` ✅ COMPLETED
+- [x] T024 [P] Integration test: Error handling and edge cases in `tests/integration/test-error-handling.test.ts` ✅ COMPLETED
 
 ## Phase 3.4: Core Implementation (ONLY after tests are failing)
 
