@@ -1,50 +1,41 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Forex Lot Size Calculator Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Accuracy First (NON-NEGOTIABLE)
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+All calculations must be mathematically precise and validated; Real-time exchange rates required for accurate conversions; Input validation mandatory - reject invalid currency pairs, negative amounts, or impossible leverage ratios; Results must include margin requirements, pip values, and position size recommendations
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. Real-Time Data Integration
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+Live forex rates from reliable financial APIs (minimum 99.5% uptime); Fallback data sources for redundancy; Rate refresh intervals not exceeding 1 minute during market hours; Clear timestamps on all rate data displayed to users
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### III. User Experience Priority
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Simple, intuitive interface - calculation results in under 3 clicks; Mobile-responsive design for traders on-the-go; Clear error messages for invalid inputs; Results displayed with proper decimal precision and currency formatting
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### IV. Risk Management Features
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+Position sizing based on account balance and risk percentage; Clear warnings for high-risk positions (>2% account risk); Display of margin requirements and available leverage; Educational tooltips explaining forex terminology and risk concepts
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### V. Performance & Reliability
+
+Page load times under 2 seconds; Calculation processing under 500ms; 99.9% uptime target; Graceful degradation when external APIs are unavailable; Local caching of recent exchange rate data
+
+## Security & Compliance Requirements
+
+Financial data protection standards must be maintained; HTTPS encryption mandatory for all data transmission; No storage of personal financial information without explicit consent; API keys and sensitive credentials stored securely using environment variables; Rate limiting implemented to prevent API abuse; Input sanitization to prevent XSS and injection attacks
+
+## Technical Standards
+
+Modern web technologies: HTML5, CSS3, JavaScript ES6+; Progressive Web App capabilities for mobile installation; Cross-browser compatibility (Chrome, Firefox, Safari, Edge); Automated testing for calculation accuracy with known test cases; Code versioning with semantic versioning (MAJOR.MINOR.PATCH); Documentation for all calculation formulas and business logic
+
+## SEO & User Acquisition Requirements
+
+Search engine optimization is mandatory for maximum user reach; Semantic HTML structure with proper heading hierarchy (H1, H2, H3); Meta descriptions and title tags optimized for forex trading keywords; Fast Core Web Vitals scores (LCP <2.5s, FID <100ms, CLS <0.1); Mobile-first indexing compliance with responsive design; Schema markup for financial tools and calculators; Clean URLs with descriptive paths (/forex-lot-calculator, /position-size-calculator); Internal linking strategy for related forex concepts; Regular content updates with forex market insights and tutorials; Social media integration for sharing calculations and results
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution defines the non-negotiable requirements for the Forex Lot Size Calculator; All features must comply with accuracy and real-time data principles; Performance benchmarks must be met before deployment; Security standards are mandatory - no exceptions for convenience; Use this constitution as the primary reference for all development decisions and feature prioritization
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-09-21 | **Last Amended**: 2025-09-21
