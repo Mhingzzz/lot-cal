@@ -6,28 +6,15 @@ import {
 } from '../../app/api/calculations/route';
 import { POST as SaveCalculation } from '../../app/api/calculations/save/route';
 import { DELETE as DeleteCalculation } from '../../app/api/calculations/[id]/route';
-import { prisma } from '../../app/lib/db';
+import { createMockPrisma, createTestRequest } from '../helpers/test-utils';
+
+// Create mock prisma instance
+const mockPrisma = createMockPrisma();
 
 // Mock the database for integration testing
 jest.mock('../../app/lib/db', () => ({
-  prisma: {
-    currencyPair: {
-      findUnique: jest.fn(),
-    },
-    calculation: {
-      create: jest.fn(),
-      findUnique: jest.fn(),
-      findMany: jest.fn(),
-      update: jest.fn(),
-      delete: jest.fn(),
-    },
-    user: {
-      findUnique: jest.fn(),
-    },
-  },
+  prisma: mockPrisma,
 }));
-
-const mockPrisma = prisma as jest.Mocked<typeof prisma>;
 
 describe('Integration Test: Save and Manage Calculations', () => {
   // Test complete calculation management workflow
@@ -75,7 +62,7 @@ describe('Integration Test: Save and Manage Calculations', () => {
       );
 
       // Create anonymous calculation
-      const calcRequest = new NextRequest(
+      const calcRequest = createTestRequest(
         'http://localhost:3000/api/calculations',
         {
           method: 'POST',
@@ -114,7 +101,7 @@ describe('Integration Test: Save and Manage Calculations', () => {
 
       // Note: This would normally require authentication
       // For testing, we'll mock the scenario where user is authenticated
-      const saveRequest = new NextRequest(
+      const saveRequest = createTestRequest(
         'http://localhost:3000/api/calculations/save',
         {
           method: 'POST',
