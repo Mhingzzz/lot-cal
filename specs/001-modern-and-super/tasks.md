@@ -47,20 +47,20 @@
 
 ### Database & Utilities Layer
 
-- [ ] T025 [P] Prisma client configuration in `app/lib/db.ts`
-- [ ] T026 [P] Forex calculation logic with decimal.js in `app/lib/forex.ts`
-- [ ] T027 [P] NextAuth.js configuration in `app/lib/auth.ts`
-- [ ] T028 [P] External forex API service in `app/lib/forex-api.ts`
+- [x] T025 [P] Prisma client configuration in `app/lib/db.ts` ✅ COMPLETED
+- [x] T026 [P] Forex calculation logic with decimal.js in `app/lib/forex.ts` ✅ COMPLETED
+- [x] T027 [P] NextAuth.js configuration in `app/lib/auth.ts` ✅ COMPLETED
+- [x] T028 [P] External forex API service in `app/lib/forex-api.ts` ✅ COMPLETED
 
 ### API Routes Implementation
 
-- [ ] T029 POST /api/calculations endpoint in `app/api/calculations/route.ts`
-- [ ] T030 GET /api/calculations endpoint in `app/api/calculations/route.ts`
-- [ ] T031 POST /api/calculations/save endpoint in `app/api/calculations/save/route.ts`
-- [ ] T032 DELETE /api/calculations/[id] endpoint in `app/api/calculations/[id]/route.ts`
-- [ ] T033 GET /api/rates/[pair] endpoint in `app/api/rates/[pair]/route.ts`
-- [ ] T034 POST /api/auth/register endpoint in `app/api/auth/register/route.ts`
-- [ ] T035 POST /api/auth/login endpoint in `app/api/auth/login/route.ts`
+- [x] T029 POST /api/calculations endpoint in `app/api/calculations/route.ts` ✅ COMPLETED
+- [x] T030 GET /api/calculations endpoint in `app/api/calculations/route.ts` ✅ COMPLETED
+- [x] T031 POST /api/calculations/save endpoint in `app/api/calculations/save/route.ts` ✅ COMPLETED
+- [x] T032 DELETE /api/calculations/[id] endpoint in `app/api/calculations/[id]/route.ts` ✅ COMPLETED
+- [x] T033 GET /api/rates/[pair] endpoint in `app/api/rates/[pair]/route.ts` ✅ COMPLETED
+- [x] T034 POST /api/auth/register endpoint in `app/api/auth/register/route.ts` ✅ COMPLETED
+- [x] T035 POST /api/auth/login endpoint in `app/api/auth/login/route.ts` ✅ COMPLETED
 
 ### React Components
 
