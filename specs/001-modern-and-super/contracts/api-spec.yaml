@@ -18,21 +18,21 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CalculationRequest"
+              $ref: '#/components/schemas/CalculationRequest'
       responses:
-        "200":
+        '200':
           description: Successful calculation
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CalculationResponse"
+                $ref: '#/components/schemas/CalculationResponse'
     get:
       summary: Get user's saved calculations
       operationId: getUserCalculations
       security:
         - bearerAuth: []
       responses:
-        "200":
+        '200':
           description: List of user calculations
 
   /calculations/save:
@@ -42,7 +42,7 @@ paths:
       security:
         - bearerAuth: []
       responses:
-        "201":
+        '201':
           description: Calculation saved successfully
 
   /calculations/{id}:
@@ -52,7 +52,7 @@ paths:
       security:
         - bearerAuth: []
       responses:
-        "204":
+        '204':
           description: Calculation deleted successfully
 
   /rates/{pair}:
@@ -60,7 +60,7 @@ paths:
       summary: Get current exchange rate
       operationId: getExchangeRate
       responses:
-        "200":
+        '200':
           description: Current exchange rate
 
   /auth/register:
@@ -68,7 +68,7 @@ paths:
       summary: Register new user
       operationId: registerUser
       responses:
-        "201":
+        '201':
           description: User registered successfully
 
   /auth/login:
@@ -76,7 +76,7 @@ paths:
       summary: User login
       operationId: loginUser
       responses:
-        "200":
+        '200':
           description: Login successful
 
 components:
@@ -103,7 +103,7 @@ components:
           maximum: 10.00
         currencyPair:
           type: string
-          pattern: "^[A-Z]{6}$"
+          pattern: '^[A-Z]{6}$'
         positionType:
           type: string
           enum: [LONG, SHORT]

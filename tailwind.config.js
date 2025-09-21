@@ -13,12 +13,12 @@ module.exports = {
           secondary: '#059669',
           accent: '#dc2626',
           warning: '#d97706',
-        }
+        },
       },
       fontFamily: {
         mono: ['JetBrains Mono', 'Monaco', 'Consolas', 'monospace'],
-      }
+      },
     },
   },
   plugins: [],
-}
+};
