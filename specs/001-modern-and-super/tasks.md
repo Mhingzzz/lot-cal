@@ -9,15 +9,15 @@
 - [x] T002 Install and configure dependencies: Next.js, Prisma, NextAuth.js, Tailwind CSS, Zod, decimal.js
 - [x] T003: Configure ESLint, Prettier, and TypeScript strict mode ✅ COMPLETED
 - [x] T004 [P] Setup Tailwind CSS configuration with responsive breakpoints and forex calculator styling
-- [ ] T005 Setup PostgreSQL database with Docker Compose for development
-- [ ] T006 Initialize Prisma ORM with PostgreSQL connection
+- [x] T005: Setup PostgreSQL database with Docker Compose for development ✅ COMPLETED
+- [x] T006: Initialize Prisma ORM with PostgreSQL connection ✅ COMPLETED
 
 ## Phase 3.2: Database Models & Schema (TDD Foundation)
 
-- [ ] T007 [P] Create Prisma schema for User model in `prisma/schema.prisma`
-- [ ] T008 [P] Create Prisma schema for Calculation model in `prisma/schema.prisma`
-- [ ] T009 [P] Create Prisma schema for CurrencyPair model in `prisma/schema.prisma`
-- [ ] T010 [P] Create Prisma schema for ExchangeRate model in `prisma/schema.prisma`
+- [x] T007 [P] Create Prisma schema for User model in `prisma/schema.prisma` ✅ COMPLETED
+- [x] T008 [P] Create Prisma schema for Calculation model in `prisma/schema.prisma` ✅ COMPLETED
+- [x] T009 [P] Create Prisma schema for CurrencyPair model in `prisma/schema.prisma` ✅ COMPLETED
+- [x] T010 [P] Create Prisma schema for ExchangeRate model in `prisma/schema.prisma` ✅ COMPLETED
 - [ ] T011 Create database migration and seed file with major currency pairs
 - [ ] T012 [P] Create Zod validation schemas in `app/lib/validations.ts`
 

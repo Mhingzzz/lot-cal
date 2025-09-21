@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model for optional save functionality
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  calculations Calculation[]
+
+  @@map("users")
+}
+
+// Currency pairs for forex trading
+model CurrencyPair {
+  id       String @id @default(cuid())
+  baseCurrency  String // e.g., "EUR"
+  quoteCurrency String // e.g., "USD"
+  symbol   String @unique // e.g., "EURUSD"
+  pipSize  Decimal @default(0.0001) // Standard pip size
+  isActive Boolean @default(true)
+  
+  // Relations
+  calculations Calculation[]
+  exchangeRates ExchangeRate[]
+  
+  @@map("currency_pairs")
+}
+
+// Exchange rates (can be real-time or historical)
+model ExchangeRate {
+  id         String   @id @default(cuid())
+  rate       Decimal  // Current exchange rate
+  timestamp  DateTime @default(now())
+  source     String?  // e.g., "manual", "api", "live"
+  
+  // Relations
+  currencyPairId String
+  currencyPair   CurrencyPair @relation(fields: [currencyPairId], references: [id])
+  
+  @@map("exchange_rates")
+}
+
+// Calculation results (for both anonymous and saved calculations)
+model Calculation {
+  id          String   @id @default(cuid())
+  
+  // Input parameters
+  accountBalance    Decimal
+  riskPercentage    Decimal  // Risk % of account balance
+  entryPrice        Decimal
+  stopLossPrice     Decimal
+  accountCurrency   String   // e.g., "USD"
+  
+  // Calculated results
+  riskAmount        Decimal  // Amount willing to lose
+  pipValue          Decimal  // Value per pip
+  lotSize           Decimal  // Calculated lot size
+  pipDistance       Decimal  // Distance in pips to stop loss
+  
+  // Metadata
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relations (optional - for saved calculations)
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id])
+  
+  currencyPairId String
+  currencyPair   CurrencyPair @relation(fields: [currencyPairId], references: [id])
+  
+  @@map("calculations")
+}
