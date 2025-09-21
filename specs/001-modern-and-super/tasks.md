@@ -18,8 +18,8 @@
 - [x] T008 [P] Create Prisma schema for Calculation model in `prisma/schema.prisma` ✅ COMPLETED
 - [x] T009 [P] Create Prisma schema for CurrencyPair model in `prisma/schema.prisma` ✅ COMPLETED
 - [x] T010 [P] Create Prisma schema for ExchangeRate model in `prisma/schema.prisma` ✅ COMPLETED
-- [ ] T011 Create database migration and seed file with major currency pairs
-- [ ] T012 [P] Create Zod validation schemas in `app/lib/validations.ts`
+- [x] T011: Create database migration and seed file with major currency pairs ✅ COMPLETED
+- [x] T012: Create Zod validation schemas in `app/lib/validations.ts` ✅ COMPLETED
 
 ## Phase 3.3: Tests First (TDD) ⚠️ MUST COMPLETE BEFORE 3.4
 
@@ -27,13 +27,13 @@
 
 ### Contract Tests (API Endpoints)
 
-- [ ] T013 [P] Contract test POST /api/calculations in `tests/contract/test-calculations-post.test.ts`
-- [ ] T014 [P] Contract test GET /api/calculations in `tests/contract/test-calculations-get.test.ts`
-- [ ] T015 [P] Contract test POST /api/calculations/save in `tests/contract/test-calculations-save.test.ts`
-- [ ] T016 [P] Contract test DELETE /api/calculations/[id] in `tests/contract/test-calculations-delete.test.ts`
-- [ ] T017 [P] Contract test GET /api/rates/[pair] in `tests/contract/test-rates-get.test.ts`
-- [ ] T018 [P] Contract test POST /api/auth/register in `tests/contract/test-auth-register.test.ts`
-- [ ] T019 [P] Contract test POST /api/auth/login in `tests/contract/test-auth-login.test.ts`
+- [x] T013: Contract test POST /api/calculations in `tests/contract/test-calculations-post.test.ts` ✅ COMPLETED
+- [x] T014: Contract test GET /api/calculations in `tests/contract/test-calculations-get.test.ts` ✅ COMPLETED
+- [x] T015: Contract test POST /api/calculations/save in `tests/contract/test-calculations-save.test.ts` ✅ COMPLETED
+- [x] T016: Contract test DELETE /api/calculations/[id] in `tests/contract/test-calculations-delete.test.ts` ✅ COMPLETED
+- [x] T017: Contract test GET /api/rates/[pair] in `tests/contract/test-rates-get.test.ts` ✅ COMPLETED
+- [x] T018: Contract test POST /api/auth/register in `tests/contract/test-auth-register.test.ts` ✅ COMPLETED
+- [x] T019: Contract test POST /api/auth/login in `tests/contract/test-auth-login.test.ts` ✅ COMPLETED
 
 ### Integration Tests (User Scenarios)
 
