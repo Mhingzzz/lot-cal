@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for forex calculator */
+.calculator-card {
+  @apply bg-white shadow-lg rounded-lg p-6 border border-gray-200;
+}
+
+.input-field {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-forex-primary focus:border-transparent;
+}
+
+.btn-primary {
+  @apply bg-forex-primary text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-forex-primary focus:ring-offset-2 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-forex-secondary text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-forex-secondary focus:ring-offset-2 transition-colors;
+}
+
+.result-card {
+  @apply bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4;
+}
+
+.error-text {
+  @apply text-forex-accent text-sm mt-1;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .calculator-card {
+    @apply mx-2 p-4;
+  }
+}
+
+/* High contrast for financial data */
+.financial-data {
+  @apply font-mono text-lg font-semibold;
+}

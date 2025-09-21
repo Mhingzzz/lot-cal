@@ -12,7 +12,7 @@ Primary requirement: Modern, user-friendly forex lot size calculator with option
 
 ## Technical Context1. Load feature spec from Input path
 
-**Language/Version**: TypeScript 5.x with Next.js 14+ (App Router)     → Feature spec loaded successfully from spec.md
+**Language/Version**: TypeScript 5.x with Next.js 15+ (App Router)     → Feature spec loaded successfully from spec.md
 
 **Primary Dependencies**: Next.js, React 18+, Prisma ORM, NextAuth.js, Tailwind CSS, Zod validation  2. Fill Technical Context (scan for NEEDS CLARIFICATION)
 
@@ -64,13 +64,13 @@ specs/001-modern-and-super/8. Plan Phase 2 → Describe task generation approach
 
 # Next.js full-stack application structurePrimary requirement: Modern, user-friendly forex lot size calculator with optional save functionality for registered users. Technical approach: Next.js full-stack application with PostgreSQL database, responsive mobile design, free exchange rate APIs, and constitutional compliance for accuracy, performance, and security.
 
-app/ # Next.js 14 App Router
+app/ # Next.js 15 App Router
 
 ├── (auth)/ # Auth route group## Technical Context
 
 │ ├── login/
 
-│ └── register/**Language/Version**: TypeScript 5.x with Next.js 14+ (App Router)
+│ └── register/**Language/Version**: TypeScript 5.x with Next.js 15+ (App Router)
 
 ├── api/ # API routes**Primary Dependencies**: Next.js, React 18+, Prisma ORM, NextAuth.js, Tailwind CSS, Zod validation
 
@@ -175,7 +175,7 @@ tests/- [x] Results include: Margin requirements, pip values, position recommend
 
 ### Technical Standards
 
-- [x] Modern web tech: Next.js 14, TypeScript, React 18
+- [x] Modern web tech: Next.js 15, TypeScript, React 18
 - [x] PWA capabilities: Next.js PWA plugin for mobile installation
 - [x] Cross-browser: Modern browser support via Next.js
 - [x] Automated testing: Jest + Playwright test coverage
@@ -210,7 +210,7 @@ specs/001-modern-and-super/
 
 # Next.js full-stack application structure
 
-app/ # Next.js 14 App Router
+app/ # Next.js 15 App Router
 ├── (auth)/ # Auth route group
 │ ├── login/
 │ └── register/

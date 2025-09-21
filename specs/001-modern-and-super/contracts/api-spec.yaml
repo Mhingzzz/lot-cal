@@ -1,0 +1,123 @@
+openapi: 3.0.3
+info:
+  title: Forex Lot Size Calculator API
+  description: REST API for forex lot size calculations and user management
+  version: 1.0.0
+
+servers:
+  - url: https://localhost:3000/api
+    description: Development server
+
+paths:
+  /calculations:
+    post:
+      summary: Calculate lot size for forex trading
+      operationId: calculateLotSize
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CalculationRequest"
+      responses:
+        "200":
+          description: Successful calculation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CalculationResponse"
+    get:
+      summary: Get user's saved calculations
+      operationId: getUserCalculations
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of user calculations
+
+  /calculations/save:
+    post:
+      summary: Save calculation to user history
+      operationId: saveCalculation
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Calculation saved successfully
+
+  /calculations/{id}:
+    delete:
+      summary: Delete saved calculation
+      operationId: deleteCalculation
+      security:
+        - bearerAuth: []
+      responses:
+        "204":
+          description: Calculation deleted successfully
+
+  /rates/{pair}:
+    get:
+      summary: Get current exchange rate
+      operationId: getExchangeRate
+      responses:
+        "200":
+          description: Current exchange rate
+
+  /auth/register:
+    post:
+      summary: Register new user
+      operationId: registerUser
+      responses:
+        "201":
+          description: User registered successfully
+
+  /auth/login:
+    post:
+      summary: User login
+      operationId: loginUser
+      responses:
+        "200":
+          description: Login successful
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+  schemas:
+    CalculationRequest:
+      type: object
+      required:
+        - accountBalance
+        - riskPercentage
+        - currencyPair
+        - positionType
+      properties:
+        accountBalance:
+          type: number
+          minimum: 0.01
+        riskPercentage:
+          type: number
+          minimum: 0.01
+          maximum: 10.00
+        currencyPair:
+          type: string
+          pattern: "^[A-Z]{6}$"
+        positionType:
+          type: string
+          enum: [LONG, SHORT]
+
+    CalculationResponse:
+      type: object
+      properties:
+        calculatedLotSize:
+          type: number
+        pipValue:
+          type: number
+        marginRequired:
+          type: number
+        riskAmount:
+          type: number
+        exchangeRate:
+          type: number
